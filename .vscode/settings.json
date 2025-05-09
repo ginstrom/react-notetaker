@@ -1,0 +1,17 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "remote.containers.defaultExtensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ],
+  "remote.extensionKind": {
+    "dbaeumer.vscode-eslint": ["workspace"],
+    "ms-azuretools.vscode-docker": ["workspace"]
+  },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
+} 
