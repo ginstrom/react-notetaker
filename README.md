@@ -49,25 +49,12 @@ docker-compose down
 
 The app will be available at http://localhost:3000
 
-## Project Structure
 
-```
-.
-├── Dockerfile
-├── Makefile
-├── docker-compose.yml
-├── package.json
-├── public/
-│   └── index.html
-├── src/
-│   ├── App.css
-│   ├── App.tsx
-│   ├── components/
-│   │   ├── AddNote.css
-│   │   ├── AddNote.tsx
-│   │   ├── NoteList.css
-│   │   └── NoteList.tsx
-│   ├── index.css
-│   └── index.tsx
-└── tsconfig.json
-```
+## Continuous Integration
+
+This project uses GitHub Actions for CI/CD. The following checks run on each pull request:
+
+- **Unit Tests**: Runs the test suite using `make test`
+- **Linting**: Runs code quality checks using `make lint`
+
+CI configuration is defined in `.github/workflows/ci.yml`.
