@@ -30,6 +30,9 @@ make run
 # Run tests
 make test
 
+# Run lint
+make lint
+
 # Stop the app
 make stop
 ```
@@ -38,17 +41,16 @@ Using Docker Compose directly:
 
 ```bash
 # Build and run
-docker-compose up
+docker-compose up app
 
 # Run in detached mode
-docker-compose up -d
+docker-compose up -d app
 
 # Stop containers
 docker-compose down
 ```
 
 The app will be available at http://localhost:3000
-
 
 ## Continuous Integration
 
