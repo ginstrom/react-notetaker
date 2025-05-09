@@ -2,6 +2,8 @@
 
 A simple note-taking application built with React and TypeScript.
 
+<img width="886" alt="Screenshot 2025-05-09 at 19 01 01" src="https://github.com/user-attachments/assets/3e8ed623-39a9-4d0c-8b0a-2f3bdbc08911" />
+
 ## Features
 
 - List of notes
