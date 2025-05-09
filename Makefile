@@ -4,13 +4,13 @@ build:
 	docker-compose build
 
 run:
-	docker-compose up
+	docker-compose up app
 
 dev:
-	docker-compose down && docker-compose build && docker-compose up
+	docker-compose down && docker-compose build app && docker-compose up app
 
 run-detached:
-	docker-compose up -d
+	docker-compose up -d app
 
 test:
 	docker-compose run --rm test
