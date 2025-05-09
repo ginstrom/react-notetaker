@@ -1,27 +1,30 @@
 .PHONY: build run test clean stop dev lint
 
+# Use docker compose command (works with both docker-compose and docker compose)
+DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null || echo "docker compose")
+
 build:
-	docker-compose build
+	$(DOCKER_COMPOSE) build
 
 run:
-	docker-compose up app
+	$(DOCKER_COMPOSE) up app
 
 dev:
-	docker-compose down && docker-compose build app && docker-compose up app
+	$(DOCKER_COMPOSE) down && $(DOCKER_COMPOSE) build app && $(DOCKER_COMPOSE) up app
 
 run-detached:
-	docker-compose up -d app
+	$(DOCKER_COMPOSE) up -d app
 
 test:
-	docker-compose run --rm test
+	$(DOCKER_COMPOSE) run --rm test
 
 lint:
 	@echo "Running linting checks..."
-	docker-compose run --rm lint
+	$(DOCKER_COMPOSE) run --rm lint
 
 clean:
-	docker-compose down
-	docker-compose rm -f
+	$(DOCKER_COMPOSE) down
+	$(DOCKER_COMPOSE) rm -f
 
 stop:
-	docker-compose down 
+	$(DOCKER_COMPOSE) down 
